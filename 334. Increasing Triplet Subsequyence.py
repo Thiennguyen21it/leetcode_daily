@@ -16,7 +16,7 @@ class Solution:
         return False
 
 
-if "__name__" == "__main__":
+if __name__ == "__main__":
     solution = Solution()
     nums = [1, 2, 3, 4, 5]
     print(solution.increasingTriplet(nums))
