@@ -3,15 +3,19 @@ from typing import List
 
 class Solution:
     def compress(self, chars: List[str]) -> int:
+        n = len(chars)
+        if n == 0:
+            return 0
+
         write = 0
         read = 0
 
-        while read < len(chars):
+        while read < n:
             char = chars[read]
             count = 0
 
             # count the number of ocurrences of curr char
-            while read < len(chars) and chars[read] == char:
+            while read < n and chars[read] == char:
                 read += 1
                 count += 1
 
