@@ -29,3 +29,4 @@ if __name__ == "__main__":
     nums1 = [1,3,5]
     nums2 = [2,4,6]
     print("output is: " , solution.merge_sorted_arr(nums1,nums2))
+     
