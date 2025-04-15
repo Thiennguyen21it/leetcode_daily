@@ -1,3 +1,7 @@
+from typing import List
+class Solution:
+    def productArray(self, nums:List[int]) -> List[int]:
+
 nums = [1, 2, 3, 4]
 n = len(nums)
 output = [1] * n
