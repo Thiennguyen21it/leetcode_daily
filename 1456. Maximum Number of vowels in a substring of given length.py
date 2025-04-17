@@ -13,8 +13,8 @@ class Solution:
            - Keep track of the maximum vowel count seen.
         """
         # Step 1: Define vowels
-        vowel_letters = {'a', 'e', 'i', 'o', 'u'}
-        
+        vowel_letters = {'a', 'e', 'i', 'o', 'u'}       
+        # vowel_letters = set(aeiou)
         # Step 2: Count vowels in the first window (first k characters)
         vowel_count = 0
         for i in range(k):  # Look at s[0] to s[k-1]
@@ -36,3 +36,9 @@ class Solution:
         
         # Step 4: Return the maximum number of vowels found
         return max_vowels
+
+if __name__ == "__main__":
+    s = "abciiidef"
+    k = 3
+    solution = Solution()
+    print("output:", solution.maxVowels(s,k))
