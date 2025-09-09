@@ -88,44 +88,61 @@ from typing import List
 # print("output:", longest_zeros(s,k))
 #
 
-def min_subarray_len(target: int, nums: List[int]):
-    left = 0 
-    total = 0 
-    min_len = float('inf')
-    for right in range(len(nums)):
-        total += nums[right] 
-        # print("total", total)
-        while total >= target:
-            min_len = min(min_len, right - left + 1)
-            total -= nums[left]
-            left +=1 
+# def min_subarray_len(target: int, nums: List[int]):
+#     left = 0 
+#     total = 0 
+#     min_len = float('inf')
+#     for right in range(len(nums)):
+#         total += nums[right] 
+#         # print("total", total)
+#         while total >= target:
+#             min_len = min(min_len, right - left + 1)
+#             total -= nums[left]
+#             left +=1 
             
-    return min_len if min_len != float('inf') else 0
+#     return min_len if min_len != float('inf') else 0
 
-target = 15
-nums = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-print(min_subarray_len(target, nums)) 
-            
-    
-    
+# target = 15
+# nums = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# print(min_subarray_len(target, nums)) 
 
+# print("Hello world")
 
 
+# stack = []
 
+# stack.append('a')
+# stack.append('b')
+# stack.append('c')
 
+# print(stack)
 
+# print(stack.pop())
 
+# def is_valid_parentheses(s: str) -> bool:
+#     stack = []
+#     # mapping = {'(':')', '{':'}','[':']'}
+#     mapping = {')': '(', '}': '{', ']': '['}
+#     for c in s:
+#         if c in mapping.values():
+#             stack.append(c)
+#         elif c in mapping:
+#             if not stack or stack[-1] != mapping[c]:
+#                 return False
+#             stack.pop 
 
+#     return not stack
+# print(is_valid_parentheses("()[]{}"))
+mapping = {')': '(', '}': '{', ']': '['}
+stack = []
 
+stack.append('(')
 
+if not stack or stack[-1] != mapping[')']:
+    print(False) 
+stack.pop()
 
-
-
-
-
-
-
-
+print(stack)
 
 
 
