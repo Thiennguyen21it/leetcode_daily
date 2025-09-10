@@ -41,7 +41,7 @@ class Solution:
                     stack.pop()
                     continue
                 elif abs(a) == stack[-1]:
-                    stack.pop
+                    stack.pop()
                 break
             else:
                 stack.append(a)
@@ -49,10 +49,7 @@ class Solution:
         return stack
 
 if __name__ == "__main__":
-    solution = Solution()
-    # test case
-    asteroids = [5,10,-5] 
-    # expected output : [5,10] : The 10 and -5 collide resulting in 10. The 5 and 10 never collide.
-    asteroidCol = solution.asteroidCollision(asteroids)
-    print("output:",asteroidCol)
-    
+    print(Solution().asteroidCollision([8,-8]))       # []
+    print(Solution().asteroidCollision([10,2,-5]))    # [10]
+    print(Solution().asteroidCollision([-2,-1,1,2]))  # [-2,-1,1,2]
+    print(Solution().asteroidCollision([5,-5,10]))    # [10]    
